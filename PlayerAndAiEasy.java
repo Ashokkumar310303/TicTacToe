@@ -97,28 +97,13 @@ public class PlayerAndAiEasy {
         int row=-1,column=-1;
 
         while(isNotValid){
-            System.out.println("Player enter your index");
-
-            System.out.println("Enter row:");
             position[0]=random.nextInt(board.length);
             row=position[0];
-
-            System.out.println("Enter column:");
             position[1]=random.nextInt(board.length);
             column=position[1];
-
-            if(row<board.length && column<board.length){
-                //then it's valid index
                 if(board[row][column]==' '){
                     isNotValid=false;
                 }
-                else{
-                    System.out.println("It's already filled ! ");
-                }
-            }
-            else{
-                System.out.println("InValid Index ! ");
-            }
         }
     }
     public static void playGame(char[][] board,char symbol,Scanner input){
