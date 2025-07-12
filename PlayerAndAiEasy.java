@@ -95,7 +95,7 @@ public class PlayerAndAiEasy {
         Random random=new Random(); //for random numbers
         boolean isNotValid=true;
         int row=-1,column=-1;
-
+        System.out.println("Bot Turn");
         while(isNotValid){
             position[0]=random.nextInt(board.length);
             row=position[0];
@@ -105,6 +105,11 @@ public class PlayerAndAiEasy {
                     isNotValid=false;
                 }
         }
+
+        System.out.println("Enter row:");
+        System.out.println(row);
+        System.out.println("Enter column:");
+        System.out.println(column);
     }
     public static void playGame(char[][] board,char symbol,Scanner input){
         int boardPiece=0;
@@ -117,10 +122,12 @@ public class PlayerAndAiEasy {
             printBoard(board);
 
             if(playerTurn){
+                System.out.println("---------------------------------------------");
                 firstPlayer(position,board,symbol,input);
                 playerTurn=false;
             }
             else{
+                System.out.println("---------------------------------------------");
                 artificalPlayer(position,board,symbol);
                 playerTurn=true;
             }
